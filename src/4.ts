@@ -37,9 +37,9 @@ abstract class House {
   comeIn(person: Person): void {
     if (this.door) {
       this.tenants.push(person);
-      console.log("Door open");
+      console.log("open");
     } else {
-      console.log("Door closed");
+      console.log("closed");
     }
   }
 }
@@ -48,9 +48,9 @@ class MyHouse extends House {
   openDoor(key: Key): void {
     if (key.getSignature() === this.key.getSignature()) {
       this.door = true;
-      console.log("Door open");
+      console.log("open");
     } else {
-      console.log("Door closed");
+      console.log("closed");
     }
   }
 }
